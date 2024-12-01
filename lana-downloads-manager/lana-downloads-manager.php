@@ -3,7 +3,7 @@
  * Plugin Name: Lana Downloads Manager
  * Plugin URI: https://lana.codes/product/lana-downloads-manager/
  * Description: Downloads Manager with counter and log.
- * Version: 1.8.2
+ * Version: 1.9.0
  * Author: Lana Codes
  * Author URI: https://lana.codes/
  * Text Domain: lana-downloads-manager
@@ -11,7 +11,7 @@
  */
 
 defined( 'ABSPATH' ) or die();
-define( 'LANA_DOWNLOADS_MANAGER_VERSION', '1.8.2' );
+define( 'LANA_DOWNLOADS_MANAGER_VERSION', '1.9.0' );
 define( 'LANA_DOWNLOADS_MANAGER_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'LANA_DOWNLOADS_MANAGER_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
@@ -389,6 +389,45 @@ function lana_downloads_manager_update_custom_post_type() {
 }
 
 add_action( 'init', 'lana_downloads_manager_update_custom_post_type' );
+
+/**
+ * Lana Downloads Manager
+ * delete the lana download assigned files before deleting the post
+ *
+ * @param $post_id
+ * @param $post
+ */
+function lana_downloads_manager_delete_lana_download_files_before_delete_post( $post_id, $post ) {
+
+	if ( ! $post ) {
+		return;
+	}
+
+	if ( ! is_a( $post, 'WP_Post' ) ) {
+		return;
+	}
+
+	if ( 'lana_download' != $post->post_type ) {
+		return;
+	}
+
+	if ( ! apply_filters( 'lana_downloads_manager_delete_lana_download_files', true ) ) {
+		return;
+	}
+
+	$attachments = get_children( array(
+		'post_parent' => $post_id,
+		'post_type'   => 'attachment',
+	) );
+
+	if ( ! empty( $attachments ) ) {
+		foreach ( $attachments as $attachment ) {
+			wp_delete_attachment( $attachment->ID, true );
+		}
+	}
+}
+
+add_action( 'before_delete_post', 'lana_downloads_manager_delete_lana_download_files_before_delete_post', 10, 2 );
 
 /**
  * lana download post type

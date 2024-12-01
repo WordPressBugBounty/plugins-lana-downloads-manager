@@ -3,8 +3,8 @@ Contributors: lanacodes
 Donate link: https://www.paypal.com/donate/?hosted_button_id=F34PNECNYHSA4
 Tags: download, download manager, file manager, download counter
 Requires at least: 4.0
-Tested up to: 6.4
-Stable tag: 1.8.2
+Tested up to: 6.7
+Stable tag: 1.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,9 @@ Use these support channels appropriately.
 1. screenshot-1.jpg
 
 == Changelog ==
+
+= 1.9.0 =
+* add function to delete the lana download assigned files before deleting the post
 
 = 1.8.2 =
 * bugfix log pager and filter
@@ -194,6 +197,9 @@ Use these support channels appropriately.
 * Added Log system
 
 == Upgrade Notice ==
+
+= 1.9.0 =
+This version improves functionality. Upgrade recommended.
 
 = 1.8.2 =
 This version fixes log pager. Upgrade recommended.
