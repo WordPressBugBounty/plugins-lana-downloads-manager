@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/donate/?hosted_button_id=F34PNECNYHSA4
 Tags: download, download manager, file manager, download counter
 Requires at least: 4.0
 Tested up to: 6.7
-Stable tag: 1.9.0
+Stable tag: 1.10.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,7 +29,7 @@ Manageable local files (WordPress uploaded) and remote files.
 * WordPress at least 4.0
 * PHP at least 5.3
 
-= Instalation steps =
+= Installation steps =
 
 1. Upload the plugin files to the `/wp-content/plugins/lana-downloads-manager` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
@@ -56,6 +56,9 @@ Use these support channels appropriately.
 1. screenshot-1.jpg
 
 == Changelog ==
+
+= 1.10.0 =
+* security fix authenticated (administrator+) arbitrary file download vulnerability
 
 = 1.9.0 =
 * add function to delete the lana download assigned files before deleting the post
@@ -197,6 +200,9 @@ Use these support channels appropriately.
 * Added Log system
 
 == Upgrade Notice ==
+
+= 1.10.0 =
+This version fixes a vulnerability. Upgrade recommended.
 
 = 1.9.0 =
 This version improves functionality. Upgrade recommended.

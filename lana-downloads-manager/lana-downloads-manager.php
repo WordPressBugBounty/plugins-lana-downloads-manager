@@ -3,7 +3,7 @@
  * Plugin Name: Lana Downloads Manager
  * Plugin URI: https://lana.codes/product/lana-downloads-manager/
  * Description: Downloads Manager with counter and log.
- * Version: 1.9.0
+ * Version: 1.10.0
  * Author: Lana Codes
  * Author URI: https://lana.codes/
  * Text Domain: lana-downloads-manager
@@ -11,7 +11,7 @@
  */
 
 defined( 'ABSPATH' ) or die();
-define( 'LANA_DOWNLOADS_MANAGER_VERSION', '1.9.0' );
+define( 'LANA_DOWNLOADS_MANAGER_VERSION', '1.10.0' );
 define( 'LANA_DOWNLOADS_MANAGER_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'LANA_DOWNLOADS_MANAGER_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
@@ -1446,6 +1446,16 @@ function lana_downloads_manager_parse_file_path( $file_path ) {
 			$file_path = new WP_Error( 'abspath_local_file_not_allowed', __( 'Local file with an absolute path is not allowed.', 'lana-downloads-manager' ) );
 		}
 
+	} elseif ( isset( $parsed_file_path['scheme'] ) && in_array( $parsed_file_path['scheme'], array(
+			'php',
+			'glob',
+			'data',
+			'phar',
+			'zip',
+		) ) ) {
+
+		$file_path = new WP_Error( 'not_supported_file_wrapper', __( 'The specified file wrapper is not supported.', 'lana-downloads-manager' ) );
+
 	} elseif ( strpos( $file_path, $wp_uploads_url ) !== false ) {
 
 		/** This is a local file given by URL so we need to figure out the path */
@@ -1493,6 +1503,10 @@ function lana_downloads_manager_parse_file_path( $file_path ) {
 		if ( ! apply_filters( 'lana_downloads_manager_allow_abspath_local_file', false ) ) {
 			$file_path = new WP_Error( 'abspath_local_file_not_allowed', __( 'Local file with an absolute path is not allowed.', 'lana-downloads-manager' ) );
 		}
+
+	} elseif ( empty( esc_url_raw( $file_path ) ) ) {
+
+		$file_path = new WP_Error( 'empty_file_path', __( 'The file path is invalid.', 'lana-downloads-manager' ) );
 	}
 
 	$local_file = $remote_file == false;

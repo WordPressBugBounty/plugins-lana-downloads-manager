@@ -2,14 +2,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Lana Downloads Manager\n"
-"POT-Creation-Date: 2022-07-21 23:19+0200\n"
+"POT-Creation-Date: 2025-03-08 07:46+0100\n"
 "PO-Revision-Date: 2016-11-23 21:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -28,7 +28,7 @@ msgstr ""
 
 #: includes/class-lana-download-widget.php:99
 #: includes/class-lana-downloads-manager-logs-list-table.php:38
-#: lana-downloads-manager.php:231 lana-downloads-manager.php:1737
+#: lana-downloads-manager.php:231 lana-downloads-manager.php:1820
 msgid "Download"
 msgstr ""
 
@@ -54,15 +54,17 @@ msgstr ""
 
 #: includes/class-lana-download-widget.php:170
 #: includes/class-lana-download-widget.php:183
-#: includes/class-lana-download-widget.php:196 lana-downloads-manager.php:990
-#: lana-downloads-manager.php:1016 lana-downloads-manager.php:1039
+#: includes/class-lana-download-widget.php:196
+#: lana-downloads-manager.php:1057 lana-downloads-manager.php:1083
+#: lana-downloads-manager.php:1106
 msgid "Enabled"
 msgstr ""
 
 #: includes/class-lana-download-widget.php:173
 #: includes/class-lana-download-widget.php:186
-#: includes/class-lana-download-widget.php:199 lana-downloads-manager.php:986
-#: lana-downloads-manager.php:1012 lana-downloads-manager.php:1035
+#: includes/class-lana-download-widget.php:199
+#: lana-downloads-manager.php:1053 lana-downloads-manager.php:1079
+#: lana-downloads-manager.php:1102
 msgid "Disabled"
 msgstr ""
 
@@ -137,11 +139,11 @@ msgid "Sorry, you are not allowed to process bulk actions."
 msgstr ""
 
 #: includes/class-lana-downloads-manager-logs-list-table.php:317
-#: lana-downloads-manager.php:790
+#: lana-downloads-manager.php:854
 msgid "Sorry, you are not allowed to delete logs."
 msgstr ""
 
-#: lana-downloads-manager.php:36 lana-downloads-manager.php:646
+#: lana-downloads-manager.php:36 lana-downloads-manager.php:688
 msgid "Settings"
 msgstr ""
 
@@ -182,11 +184,11 @@ msgid "Search Downloads"
 msgstr ""
 
 #: lana-downloads-manager.php:240
-msgid "No Downloads found"
+msgid "No downloads found"
 msgstr ""
 
 #: lana-downloads-manager.php:241
-msgid "No Downloads found in trash"
+msgid "No downloads found in Trash"
 msgstr ""
 
 #: lana-downloads-manager.php:242
@@ -201,226 +203,234 @@ msgstr ""
 msgid "Category"
 msgstr ""
 
-#: lana-downloads-manager.php:403
+#: lana-downloads-manager.php:442
 msgid "URL"
 msgstr ""
 
-#: lana-downloads-manager.php:404
+#: lana-downloads-manager.php:443
 msgid "Shortcode"
 msgstr ""
 
-#: lana-downloads-manager.php:405
+#: lana-downloads-manager.php:444
 msgid "Download Count"
 msgstr ""
 
-#: lana-downloads-manager.php:512
+#: lana-downloads-manager.php:551
 msgid "All Categories"
 msgstr ""
 
-#: lana-downloads-manager.php:513
+#: lana-downloads-manager.php:552
 msgid "None"
 msgstr ""
 
-#: lana-downloads-manager.php:640 lana-downloads-manager.php:1005
+#: lana-downloads-manager.php:679 lana-downloads-manager.php:1072
 msgid "Logs"
 msgstr ""
 
-#: lana-downloads-manager.php:668
+#: lana-downloads-manager.php:732
 msgid "Logs per page"
 msgstr ""
 
-#: lana-downloads-manager.php:763 lana-downloads-manager.php:805
+#: lana-downloads-manager.php:827 lana-downloads-manager.php:869
 msgid "Lana Downloads Manager Logs"
 msgstr ""
 
-#: lana-downloads-manager.php:767
+#: lana-downloads-manager.php:831
 #, php-format
 msgid ""
 "Logs are disabled. Go to the <a href=\"%s\">Settings</a> page to enable it."
 msgstr ""
 
-#: lana-downloads-manager.php:826
+#: lana-downloads-manager.php:893
 msgid "Lana Downloads Manager Settings"
 msgstr ""
 
-#: lana-downloads-manager.php:833
+#: lana-downloads-manager.php:900
 msgid "Lana Codes"
 msgstr ""
 
-#: lana-downloads-manager.php:842
+#: lana-downloads-manager.php:909
 msgid "General Settings"
 msgstr ""
 
-#: lana-downloads-manager.php:844
+#: lana-downloads-manager.php:911
 msgid "Specify the URL structure of the file to download"
 msgstr ""
 
-#: lana-downloads-manager.php:850
+#: lana-downloads-manager.php:917
 msgid "Endpoint"
 msgstr ""
 
-#: lana-downloads-manager.php:857
+#: lana-downloads-manager.php:924
 msgid "The endpoint of the file download path in the URL."
 msgstr ""
 
-#: lana-downloads-manager.php:864
+#: lana-downloads-manager.php:931
 msgid "Endpoint Type"
 msgstr ""
 
-#: lana-downloads-manager.php:871
+#: lana-downloads-manager.php:938
 msgid "ID"
 msgstr ""
 
-#: lana-downloads-manager.php:875
+#: lana-downloads-manager.php:942
 msgid "slug"
 msgstr ""
 
-#: lana-downloads-manager.php:879
+#: lana-downloads-manager.php:946
 msgid "The type of method for uniquely identifying each file in the URL."
 msgstr ""
 
-#: lana-downloads-manager.php:886
+#: lana-downloads-manager.php:953
 msgid "Role Edit Files"
 msgstr ""
 
-#: lana-downloads-manager.php:902
+#: lana-downloads-manager.php:969
 msgid ""
 "Users from the selected roles above will have permission to edit files in "
 "Lana Download."
 msgstr ""
 
-#: lana-downloads-manager.php:908
+#: lana-downloads-manager.php:975
 msgid "Media Settings"
 msgstr ""
 
-#: lana-downloads-manager.php:913
+#: lana-downloads-manager.php:980
 msgid "Uploading Files Folder"
 msgstr ""
 
-#: lana-downloads-manager.php:921
+#: lana-downloads-manager.php:988
 msgid "Use the default WordPress Media folder structure"
 msgstr ""
 
-#: lana-downloads-manager.php:925
+#: lana-downloads-manager.php:992
 msgid "Use the Lana Download Base folder structure"
 msgstr ""
 
-#: lana-downloads-manager.php:929
+#: lana-downloads-manager.php:996
 #, php-format
 msgid ""
 "WordPress Media folder stucture: the default setting is on the %s page."
 msgstr ""
 
-#: lana-downloads-manager.php:930
+#: lana-downloads-manager.php:997
 msgid "Settings > Media"
 msgstr ""
 
-#: lana-downloads-manager.php:933
+#: lana-downloads-manager.php:1000
 msgid ""
 "Lana Download Base folder structure: all files are placed directly in the "
 "base folder."
 msgstr ""
 
-#: lana-downloads-manager.php:939
+#: lana-downloads-manager.php:1006
 msgid "Custom Post Type Settings"
 msgstr ""
 
-#: lana-downloads-manager.php:941
+#: lana-downloads-manager.php:1008
 msgid "Specify the URL structure of the downloadable file post"
 msgstr ""
 
-#: lana-downloads-manager.php:943
+#: lana-downloads-manager.php:1010
 msgid ""
 "The custom post type only displays the information and not the file "
 "download URL"
 msgstr ""
 
-#: lana-downloads-manager.php:949
+#: lana-downloads-manager.php:1016
 msgid "Post Type Endpoint"
 msgstr ""
 
-#: lana-downloads-manager.php:957
+#: lana-downloads-manager.php:1024
 msgid "The endpoint of the post path in the URL."
 msgstr ""
 
-#: lana-downloads-manager.php:964
+#: lana-downloads-manager.php:1031
 msgid "Category Endpoint"
 msgstr ""
 
-#: lana-downloads-manager.php:972
+#: lana-downloads-manager.php:1039
 msgid "The endpoint of the category path in the URL."
 msgstr ""
 
-#: lana-downloads-manager.php:979
+#: lana-downloads-manager.php:1046
 msgid "Public"
 msgstr ""
 
-#: lana-downloads-manager.php:994
+#: lana-downloads-manager.php:1061
 msgid ""
 "Visibility of downloadable file information to the public. The setting "
 "also includes public query and listability."
 msgstr ""
 
-#: lana-downloads-manager.php:1000
+#: lana-downloads-manager.php:1067
 msgid "Log Settings"
 msgstr ""
 
-#: lana-downloads-manager.php:1023
+#: lana-downloads-manager.php:1090
 msgid "Counter Settings"
 msgstr ""
 
-#: lana-downloads-manager.php:1028
+#: lana-downloads-manager.php:1095
 msgid "Counter"
 msgstr ""
 
-#: lana-downloads-manager.php:1050
+#: lana-downloads-manager.php:1117
 msgid "Save Changes"
 msgstr ""
 
-#: lana-downloads-manager.php:1195
+#: lana-downloads-manager.php:1262
 msgid "No download_id defined."
 msgstr ""
 
-#: lana-downloads-manager.php:1200
+#: lana-downloads-manager.php:1267
 msgid "The download is not available."
 msgstr ""
 
-#: lana-downloads-manager.php:1207
+#: lana-downloads-manager.php:1274
 msgid "No file URL defined."
 msgstr ""
 
-#: lana-downloads-manager.php:1209 lana-downloads-manager.php:1223
-#: lana-downloads-manager.php:1234
+#: lana-downloads-manager.php:1276 lana-downloads-manager.php:1290
+#: lana-downloads-manager.php:1301
 msgid "Go to homepage &rarr;"
 msgstr ""
 
-#: lana-downloads-manager.php:1212 lana-downloads-manager.php:1226
-#: lana-downloads-manager.php:1237
+#: lana-downloads-manager.php:1279 lana-downloads-manager.php:1293
+#: lana-downloads-manager.php:1304
 msgid "Download Error"
 msgstr ""
 
-#: lana-downloads-manager.php:1232
+#: lana-downloads-manager.php:1299
 msgid "No file path defined."
 msgstr ""
 
-#: lana-downloads-manager.php:1377 lana-downloads-manager.php:1402
-#: lana-downloads-manager.php:1414 lana-downloads-manager.php:1425
+#: lana-downloads-manager.php:1446 lana-downloads-manager.php:1481
+#: lana-downloads-manager.php:1493 lana-downloads-manager.php:1504
 msgid "Local file with an absolute path is not allowed."
 msgstr ""
 
-#: lana-downloads-manager.php:1389
+#: lana-downloads-manager.php:1457
+msgid "The specified file wrapper is not supported."
+msgstr ""
+
+#: lana-downloads-manager.php:1468
 msgid "Local file outside of wp uploads directory is not allowed."
 msgstr ""
 
-#: lana-downloads-manager.php:1441
+#: lana-downloads-manager.php:1509
+msgid "The file path is invalid."
+msgstr ""
+
+#: lana-downloads-manager.php:1524
 msgid "Local file in the root absolute path is not allowed."
 msgstr ""
 
-#: lana-downloads-manager.php:1575
+#: lana-downloads-manager.php:1658
 msgid "disabled"
 msgstr ""
 
-#: lana-downloads-manager.php:1840
+#: lana-downloads-manager.php:1946
 msgid "Error: You do not have permission to view downloads!"
 msgstr ""
 
