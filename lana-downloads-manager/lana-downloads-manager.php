@@ -3,7 +3,7 @@
  * Plugin Name: Lana Downloads Manager
  * Plugin URI: https://lana.codes/product/lana-downloads-manager/
  * Description: Downloads Manager with counter and log.
- * Version: 1.10.0
+ * Version: 1.11.0
  * Author: Lana Codes
  * Author URI: https://lana.codes/
  * Text Domain: lana-downloads-manager
@@ -11,7 +11,7 @@
  */
 
 defined( 'ABSPATH' ) or die();
-define( 'LANA_DOWNLOADS_MANAGER_VERSION', '1.10.0' );
+define( 'LANA_DOWNLOADS_MANAGER_VERSION', '1.11.0' );
 define( 'LANA_DOWNLOADS_MANAGER_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'LANA_DOWNLOADS_MANAGER_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
@@ -761,15 +761,15 @@ add_filter( 'set-screen-option', 'lana_downloads_manager_logs_page_set_screen_op
  * Register settings
  */
 function lana_downloads_manager_register_settings() {
-	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_endpoint' );
+	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_endpoint', 'sanitize_key' );
 	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_endpoint_type' );
 	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_role_edit_lana_download_files', array(
 		'type'              => 'array',
 		'sanitize_callback' => 'lana_downloads_manager_sanitize_array',
 	) );
 	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_uploading_files_folder' );
-	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_post_type_endpoint' );
-	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_category_endpoint' );
+	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_post_type_endpoint', 'sanitize_key' );
+	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_category_endpoint', 'sanitize_key' );
 	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_public' );
 	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_logs' );
 	register_setting( 'lana-downloads-manager-settings-group', 'lana_downloads_manager_counter' );

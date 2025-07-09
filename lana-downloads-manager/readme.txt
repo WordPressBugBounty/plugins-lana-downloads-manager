@@ -3,8 +3,9 @@ Contributors: lanacodes
 Donate link: https://www.paypal.com/donate/?hosted_button_id=F34PNECNYHSA4
 Tags: download, download manager, file manager, download counter
 Requires at least: 4.0
-Tested up to: 6.7
-Stable tag: 1.10.0
+Requires PHP: 5.6
+Tested up to: 6.8
+Stable tag: 1.11.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +28,7 @@ Manageable local files (WordPress uploaded) and remote files.
 
 = Requires =
 * WordPress at least 4.0
-* PHP at least 5.3
+* PHP at least 5.6
 
 = Installation steps =
 
@@ -46,10 +47,14 @@ Do you have questions or issues with Lana Downloads Manager?
 Use these support channels appropriately.
 
 = Lana Codes =
-[Support](https://lana.codes/contact/)
+You can contact us via the [contact form](https://lana.codes/contact/) on the Lana Codes website.
+Or feel free to reach us at: [info@lana.codes](mailto:info@lana.codes).
 
 = WordPress Forum =
-[Support Forum](http://wordpress.org/support/plugin/lana-downloads-manager)
+You can use the WordPress.org [support forum](http://wordpress.org/support/plugin/lana-downloads-manager) if you have any questions or need help with the plugin.
+
+= Reporting Security Issues =
+Please report all vulnerabilities found in this software using the [Wordfence Vulnerability Submission Form](https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/lana-downloads-manager/submit)
 
 == Screenshots ==
 
@@ -57,8 +62,11 @@ Use these support channels appropriately.
 
 == Changelog ==
 
+= 1.11.0 =
+* security fix (CVE-2025-7387) authenticated (administrator+) stored xss vulnerability
+
 = 1.10.0 =
-* security fix authenticated (administrator+) arbitrary file download vulnerability
+* security fix (CVE-2025-2048) authenticated (administrator+) arbitrary file download vulnerability (thanks to Bruno Oliveira)
 
 = 1.9.0 =
 * add function to delete the lana download assigned files before deleting the post
@@ -73,17 +81,21 @@ Use these support channels appropriately.
 * improve tinymce shortcode button
 
 = 1.8.0 =
+* security fix (CVE-2022-2392) hardening
 * improve wp uploads dir check
 * improve abspath local file check
 
 = 1.7.1 =
+* security fix (CVE-2022-2392) hardening
 * bugfix role edit files option default value
 
 = 1.7.0 =
+* security fix (CVE-2022-2392) hardening
 * add role edit files to settings
 * add lana download post is published check
 
 = 1.6.0 =
+* security fix (CVE-2022-2392) authenticated (contributor+) arbitrary file download vulnerability (thanks to Raad Haddad)
 * add edit_files permission check
 * add allow abspath local file check
 
@@ -200,6 +212,9 @@ Use these support channels appropriately.
 * Added Log system
 
 == Upgrade Notice ==
+
+= 1.11.0 =
+This version fixes a vulnerability. Upgrade recommended.
 
 = 1.10.0 =
 This version fixes a vulnerability. Upgrade recommended.
