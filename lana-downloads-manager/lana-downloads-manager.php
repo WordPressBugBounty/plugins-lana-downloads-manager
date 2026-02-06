@@ -3,7 +3,7 @@
  * Plugin Name: Lana Downloads Manager
  * Plugin URI: https://lana.codes/product/lana-downloads-manager/
  * Description: Downloads Manager with counter and log.
- * Version: 1.11.0
+ * Version: 1.12.0
  * Author: Lana Codes
  * Author URI: https://lana.codes/
  * Text Domain: lana-downloads-manager
@@ -11,7 +11,7 @@
  */
 
 defined( 'ABSPATH' ) or die();
-define( 'LANA_DOWNLOADS_MANAGER_VERSION', '1.11.0' );
+define( 'LANA_DOWNLOADS_MANAGER_VERSION', '1.12.0' );
 define( 'LANA_DOWNLOADS_MANAGER_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'LANA_DOWNLOADS_MANAGER_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
@@ -19,7 +19,11 @@ define( 'LANA_DOWNLOADS_MANAGER_DIR_PATH', plugin_dir_path( __FILE__ ) );
  * Language
  * load
  */
-load_plugin_textdomain( 'lana-downloads-manager', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+function lana_downloads_manager_load_textdomain() {
+	load_plugin_textdomain( 'lana-downloads-manager', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
+
+add_action( 'init', 'lana_downloads_manager_load_textdomain' );
 
 /**
  * Add plugin action links

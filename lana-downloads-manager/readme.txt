@@ -5,7 +5,7 @@ Tags: download, download manager, file manager, download counter
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 6.8
-Stable tag: 1.11.0
+Stable tag: 1.12.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,9 @@ Please report all vulnerabilities found in this software using the [Wordfence Vu
 1. screenshot-1.jpg
 
 == Changelog ==
+
+= 1.12.0 =
+* improve textdomain load function
 
 = 1.11.0 =
 * security fix (CVE-2025-7387) authenticated (administrator+) stored xss vulnerability
@@ -212,6 +215,9 @@ Please report all vulnerabilities found in this software using the [Wordfence Vu
 * Added Log system
 
 == Upgrade Notice ==
+
+= 1.12.0 =
+This version improves functionality. Upgrade recommended.
 
 = 1.11.0 =
 This version fixes a vulnerability. Upgrade recommended.
